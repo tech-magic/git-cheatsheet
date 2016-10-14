@@ -1,4 +1,4 @@
-# Git Commands Cheatsheet
+# Part 1 - Routine Git Commands Cheatsheet
 
 ## Clone a Remote Git Repository
 
@@ -67,7 +67,9 @@ git checkout myfiletorevert.js
 1. git rm -f logstash-mi-appender/pom.xml~
 2. git commit -m "Removing unwanted files"
 
-# Migrate from an old GIT repo to a new GIT repo while saving revision history 
+# Part 2 - Migrate from an old GIT repo to a new GIT repo while saving revision history
+
+Let's assume we call "old repo" the repository you wish to move, and "new repo" the one you wish to move to. 
 
 ## Make sure you have a local copy of all "old repo" branches and tags.
 
