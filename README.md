@@ -86,7 +86,7 @@ Let's assume we call "old repo" the repository you wish to move, and "new repo" 
 
 ## Add a "new repo" as a new remote origin:
 
-git remote add new-origin git@github.com:user/repo.git
+`git remote add new-origin git@github.com:user/repo.git`
 
 ## Step 3. Push all local branches and tags to a "new repo".
 
