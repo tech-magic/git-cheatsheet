@@ -28,16 +28,6 @@
 1. `git branch -a`
 2. `git fetch`
 
-## Merge Committed files in custom branch (e.g. wimal) to local develop branch and push it to remote develop branch
-
-1. `git branch -a`
-2. `git pull` (update the local develop from remote develop branch)
-3. `git merge wimal` (then resolve conflicts)
-4. `git status`
-5. `git add changed_file1.html changed_file2.js`
-6. `git commit -m "Adding merged changes"`
-7. `git push`
-
 ## Delete Temporary Branch (e.g. wimal)
 
 `git branch -d wimal`
@@ -66,6 +56,36 @@
 
 1. `git rm -f logstash-mi-appender/pom.xml~`
 2. `git commit -m "Removing unwanted files"`
+
+## Resolve conflict using my files
+
+1. `git status`
+2. The conflicted files will be listed as `both modified`
+3. Select a conflicted file
+4. Browse the file contents. Find places with `<<<<<<` and `>>>>>` marks. The marks indicate which changes come from foreign or local branch. Resolve the conflicts manually.
+5. `git add path_to_conflicted_file`
+6. `git commit -m 'Resolved Conflict'`
+7. `git push`
+
+## Resolve conflict using their files
+
+1. `git status`
+2. The conflicted files will be listed as `both modified`
+3. Select a conflicted file
+4. `git checkout --theirs path_to_conflicted_file`
+5. `git add path_to_conflicted_file`
+6. `git commit -m 'Resolved Conflict'`
+7. `git push`
+
+## Merge Committed files in custom branch (e.g. wimal) to local develop branch and push it to remote develop branch
+
+1. `git branch -a`
+2. `git pull` (update the local develop from remote develop branch)
+3. `git merge wimal` (then resolve conflicts)
+4. `git status`
+5. `git add changed_file1.html changed_file2.js`
+6. `git commit -m "Adding merged changes"`
+7. `git push`
 
 # Part 2 - Migrate from an old GIT repo to a new GIT repo while saving revision history
 
